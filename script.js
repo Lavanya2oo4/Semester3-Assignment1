@@ -23,6 +23,25 @@ c1.innerHTML=`Row ${rowCount} Col 1`
 c2.innerHTML=`Row ${rowCount} Col 2`
 
 currentRowCount+=1
+
+
+
+
+//code to show a messagethat new  row is inserted and button becomes disabled until the message box is disappered
+let messageBox=document.createElement("div")
+messageBox.innerHTML="<small>✅New Row Inserted</small>"
+messageBox.style.color="red"
+document.getElementById("insert").disabled=true
+document.body.appendChild(messageBox)
+
+setTimeout(()=>{
+   messageBox.remove()
+document.getElementById("insert").disabled=false
+
+},1000)
+
+
+
 }
 
 
@@ -31,11 +50,38 @@ function delStart(){
     let table=document.getElementById("table")
     table.deleteRow(0)
 
+
+    //messageBox
+    let messageBox=document.createElement("div")
+messageBox.innerHTML="<small>⚠️Row Deleted From Start</small>"
+messageBox.style.color="red"
+document.getElementById("insert").disabled=true
+document.body.appendChild(messageBox)
+
+setTimeout(()=>{
+   messageBox.remove()
+document.getElementById("insert").disabled=false
+
+},1000)
+
 }
 
 //deletes Row From End
 function delEnd(){
     let table=document.getElementById("table")
     table.deleteRow(-1)
+
+
+    let messageBox=document.createElement("div")
+messageBox.innerHTML="<small>⚠️Row Deleted From End</small>"
+messageBox.style.color="red"
+document.getElementById("insert").disabled=true
+document.body.appendChild(messageBox)
+
+setTimeout(()=>{
+   messageBox.remove()
+document.getElementById("insert").disabled=false
+
+},1000)
 
 }

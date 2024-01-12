@@ -12,6 +12,7 @@ table{
     margin: 4vh ;
     width:30vw;
     text-align: center;
+    
 }
 
 
@@ -29,6 +30,7 @@ button{
    font-size: 2.5vh;
    font-weight: 600;
    cursor:pointer;
+   margin: 3vh;
 }
 button:hover{
     box-shadow: 3px 3px 3px rgba(70, 94, 94, 0.621);

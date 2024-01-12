@@ -98,6 +98,23 @@ function delEnd() {
 
     //code to check if no more rows exist
 
+ let remainingRows=document.getElementsByClassName("tableRow").length
+ if(remainingRows<=0){
+     let messageBox = document.createElement("div")
+     messageBox.innerHTML = "<small>❌No more Rows to Delete</small>"
+     messageBox.style.color = "red"
+     document.getElementById("delStart").disabled = true
+     document.body.appendChild(messageBox)
+ 
+     setTimeout(() => {
+         messageBox.remove()
+         document.getElementById("delStart").disabled = false
+ 
+     }, 1000)
+
+
+     return
+ }
 
 
 
@@ -119,3 +136,34 @@ function delEnd() {
     }, 1000)
 
 }
+
+
+function delInput(){
+    let inputRow=document.getElementById("specificRowDelete").value
+
+    if(inputRow>document.getElementsByClassName("tableRow").length){
+
+        let messageBox = document.createElement("div")
+    messageBox.innerHTML = "<small>❌No Such Row Exists</small>"
+    messageBox.style.color = "red"
+    document.getElementById("delGivenRow").disabled = true
+    document.body.appendChild(messageBox)
+
+    setTimeout(() => {
+        messageBox.remove()
+        document.getElementById("delGivenRow").disabled = false
+
+    }, 1000)
+        return
+    }
+
+    let toDel=document.getElementsByClassName("tableRow")[inputRow-1]
+    toDel.remove()
+}
+
+
+
+let form=document.getElementsByTagName("form")[0]
+form.addEventListener("submit",(e)=>{
+    e.preventDefault()
+})

@@ -41,6 +41,11 @@
         <button id="insert" onclick="insert()"> Insert Row</button>
         <button id="delStart" onclick="delStart()">Delete Row From Start</button>
         <button id="delEnd" onclick="delEnd()">Delete Row From End</button>
+
+        <form>
+            <input type="number"  id="specificRowDelete" maxlength="2" value="1">
+            <button type="submit" id="delGivenRow" onclick="delInput()">Delete Selected Row</button>
+        </form>
     </div>
     
 </body>

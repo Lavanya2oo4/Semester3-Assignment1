@@ -35,3 +35,6 @@ button{
 button:hover{
     box-shadow: 3px 3px 3px rgba(70, 94, 94, 0.621);
 }
+#specificRowDelete{
+    width:10vw
+}

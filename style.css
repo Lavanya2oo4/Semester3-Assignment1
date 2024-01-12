@@ -1,0 +1,32 @@
+table,tr,td{
+    border:2px solid black
+}
+
+td{
+    padding:1vh;
+}
+table{
+    margin: 4vh ;
+    width:30vw;
+    text-align: center;
+}
+
+
+
+h1{
+    color:dodgerblue;
+    margin: auto;
+    width:25vw;
+
+}
+button{
+   padding:1vh;
+   border-radius: 1vh;
+   background-color: rgba(95, 158, 160, 0.378);
+   font-size: 2.5vh;
+   font-weight: 600;
+   cursor:pointer;
+}
+button:hover{
+    box-shadow: 3px 3px 3px rgba(70, 94, 94, 0.621);
+}

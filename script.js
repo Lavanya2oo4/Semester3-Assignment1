@@ -32,3 +32,10 @@ function delStart(){
     table.deleteRow(0)
 
 }
+
+//deletes Row From End
+function delEnd(){
+    let table=document.getElementById("table")
+    table.deleteRow(-1)
+
+}
